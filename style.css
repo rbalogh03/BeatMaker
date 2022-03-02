@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.kickContainer, .snareContainer, .clapContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    width: 70%
+}
+
+.beatsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.beat {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.kick-beat {
+    background: rgb(219, 139, 139);
+    transition: all .5s ease
+}
+
+.snare-beat {
+    background: rgb(103, 103, 201);
+    transition: all .5s ease
+}
+
+.clap-beat {
+    background: rgb(180, 201, 103);
+    transition: all .5s ease
+}
+
+.kick-beat.active {
+    background: rgb(150, 39, 39);
+}
+
+.snare-beat.active {
+    background: rgb(41, 41, 114)
+}
+
+.clap-beat.active {
+    background: rgb(123, 146, 41)
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    margin-right: 2rem
+}
+
+.mute {
+    background: rgb(141, 141, 141);
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+#kickTypes, #snareTypes, #clapTypes {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@keyframes beatDrop {
+    from {transform: scale(1);}
+    to{transform: scale(1.2);}
+}
