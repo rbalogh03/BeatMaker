@@ -73,10 +73,11 @@
     border: none;
     padding: 1.5rem;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .mute.active {
-    background: red
+    background: rgb(88, 88, 88);
 }
 
 #kickTypes, #snareTypes, #clapTypes {
@@ -84,7 +85,61 @@
     cursor: pointer;
 }
 
+.playContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    width: 80%;
+    flex: 1
+}
+
+.playContainer button {
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+    background: rgb(141, 141, 141);
+    cursor: pointer;
+    margin-bottom: 1rem
+}
+
+.playContainer input[type='range'] {
+    -webkit-appearance: none;
+    background-color: rgb(141, 141, 141);
+    border-radius: 30px;
+    padding: 0.2rem 0;
+    width: 100%;
+    color: black;
+    cursor: pointer;
+    margin: 0 1rem
+}
+
+.playContainer p {
+    margin-top: .7rem;
+    font-size: 1.2rem
+}
+
+.tempoControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%
+}
+
+.tempoControls button {
+    padding: .5rem .8rem;
+    border-radius: 0px;
+    margin: 0
+}
+
 @keyframes beatDrop {
     from {transform: scale(1);}
     to{transform: scale(1.2);}
+}
+
+@keyframes clickedBtn {
+    from {transform: scale(1);}
+    to {transform: scale(0.9)}
 }
